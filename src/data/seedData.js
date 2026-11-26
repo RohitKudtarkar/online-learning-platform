@@ -1,0 +1,292 @@
+export const INITIAL_CATEGORIES = [
+  'Web Development',
+  'UI/UX Design',
+  'Data & AI',
+  'Mobile Development',
+  'Product & Business',
+];
+
+export const INITIAL_COURSES = [
+  {
+    id: 'course-react-mastery',
+    title: 'Modern React & Frontend Architecture Bootcamp',
+    subtitle: 'Build scalable, production-grade React applications with hooks, state patterns, and Tailwind CSS.',
+    category: 'Web Development',
+    level: 'Intermediate',
+    price: 79,
+    originalPrice: 149,
+    rating: 4.9,
+    reviewsCount: 342,
+    studentsCount: 1840,
+    duration: '14h 30m',
+    instructor: {
+      name: 'Abc Abc',
+      role: 'Principal Frontend Engineer',
+      avatar: 'AM',
+    },
+    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80',
+    status: 'Published',
+    featured: true,
+    outcomes: [
+      'Architect reusable component systems with React 19 and Tailwind CSS',
+      'Manage global state cleanly with Context API and custom hooks',
+      'Implement accessible forms, client-side validation, and protected routing',
+      'Deploy optimized production builds with zero runtime bottlenecks',
+    ],
+    sections: [
+      {
+        id: 'sec-1',
+        title: 'Foundations & Component Architecture',
+        lessons: [
+          {
+            id: 'les-101',
+            title: 'Course Roadmap & Modern React Setup',
+            duration: '12:40',
+            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+            summary: 'Overview of project structure, Vite tooling, and component composition principles.',
+            resources: ['Starter-Repo-Guide.pdf', 'Architecture-Checklist.md'],
+          },
+          {
+            id: 'les-102',
+            title: 'Mastering Props, Composition & Slots',
+            duration: '18:15',
+            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+            summary: 'Avoiding prop drilling using clean component composition patterns.',
+            resources: ['Composition-Patterns.pdf'],
+          },
+        ],
+      },
+      {
+        id: 'sec-2',
+        title: 'State Management & Real-World Data Flows',
+        lessons: [
+          {
+            id: 'les-103',
+            title: 'Custom Hooks for Forms & Validation',
+            duration: '22:10',
+            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+            summary: 'Building reusable validation logic and instant user feedback.',
+            resources: ['Validation-Snippet.js'],
+          },
+          {
+            id: 'les-104',
+            title: 'Context API & LocalStorage Persistence',
+            duration: '25:00',
+            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoy.mp4',
+            summary: 'Synchronizing application state across routes and browser reloads.',
+            resources: ['State-Persistence-Diagram.png'],
+          },
+        ],
+      },
+    ],
+    quiz: {
+      id: 'quiz-react-1',
+      title: 'React Architecture Assessment',
+      passingScore: 70,
+      questions: [
+        {
+          id: 'q1',
+          question: 'Which pattern best prevents deep prop drilling across unrelated components?',
+          options: [
+            'Inline CSS styles',
+            'React Context API or component composition',
+            'Multiple index.html files',
+            'Static global variables outside React',
+          ],
+          correctIndex: 1,
+        },
+        {
+          id: 'q2',
+          question: 'When should form field validation ideally trigger for the best UX?',
+          options: [
+            'Never, let the server crash',
+            'On every single keystroke before the user finishes typing',
+            'On field blur and on form submission',
+            'Only after page refresh',
+          ],
+          correctIndex: 2,
+        },
+        {
+          id: 'q3',
+          question: 'What does localStorage store natively?',
+          options: [
+            'Raw JavaScript functions',
+            'UTF-16 string key-value pairs',
+            'Binary video streams only',
+            'SQL database tables',
+          ],
+          correctIndex: 1,
+        },
+      ],
+    },
+    assignment: {
+      id: 'asg-react-1',
+      title: 'Build a Validated Multi-Step Enrollment Modal',
+      dueDate: '2026-12-10',
+      description: 'Create a responsive modal component in React + Tailwind CSS with name, email, and track validation plus a toast confirmation.',
+    },
+    reviews: [
+      { id: 'rev-1', user: 'Aaa Aaa', rating: 5, comment: 'Super practical structure. Built two client projects right after finishing!', date: '2026-10-18' },
+      { id: 'rev-2', user: 'Bbb Bbb', rating: 5, comment: 'Clear explanations of state persistence and UI architecture.', date: '2026-11-02' },
+    ],
+  },
+  {
+    id: 'course-uiux-systems',
+    title: 'UI/UX Design Systems & Figma to Production',
+    subtitle: 'Design high-converting interfaces, typography scales, color tokens, and responsive layouts.',
+    category: 'UI/UX Design',
+    level: 'Beginner',
+    price: 69,
+    originalPrice: 129,
+    rating: 4.8,
+    reviewsCount: 218,
+    studentsCount: 1420,
+    duration: '11h 15m',
+    instructor: {
+      name: 'Lmn Lmn',
+      role: 'Lead Product Designer',
+      avatar: 'ND',
+    },
+    thumbnail: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80',
+    status: 'Published',
+    featured: true,
+    outcomes: [
+      'Create cohesive spacing, typography, and accessible color contrast systems',
+      'Design conversion-focused landing pages and SaaS dashboards',
+      'Translate Figma wireframes directly into responsive Tailwind grids',
+    ],
+    sections: [
+      {
+        id: 'sec-ux-1',
+        title: 'Visual Hierarchy & Typography',
+        lessons: [
+          {
+            id: 'les-201',
+            title: '8pt Grid Systems & Scannable Layouts',
+            duration: '15:20',
+            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+            summary: 'How spacing rhythm creates immediate visual clarity.',
+            resources: ['Spacing-Scale-Sheet.pdf'],
+          },
+          {
+            id: 'les-202',
+            title: 'Color Psychology & WCAG Contrast Rules',
+            duration: '19:45',
+            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+            summary: 'Choosing primary, surface, and semantic feedback colors.',
+            resources: ['Contrast-Tokens.json'],
+          },
+        ],
+      },
+    ],
+    quiz: {
+      id: 'quiz-ux-1',
+      title: 'UI/UX Fundamentals Quiz',
+      passingScore: 70,
+      questions: [
+        {
+          id: 'ux-q1',
+          question: 'What is the primary goal of visual hierarchy on a landing page?',
+          options: [
+            'Use as many fonts as possible',
+            'Guide the user’s eye from value proposition to primary action',
+            'Hide the navigation bar completely',
+            'Fill every pixel with text',
+          ],
+          correctIndex: 1,
+        },
+        {
+          id: 'ux-q2',
+          question: 'Which grid base is standard for modern UI spacing scales?',
+          options: ['7pt grid', '8pt grid', '13pt grid', '25pt grid'],
+          correctIndex: 1,
+        },
+      ],
+    },
+    assignment: {
+      id: 'asg-ux-1',
+      title: 'Redesign a High-Conversion Pricing Section',
+      dueDate: '2026-12-15',
+      description: 'Design a 3-tier pricing layout highlighting a recommended plan with clear feature comparison.',
+    },
+    reviews: [
+      { id: 'rev-3', user: 'Xyz Xyz', rating: 5, comment: 'Helped me organize my typography and spacing immediately.', date: '2026-11-05' },
+    ],
+  },
+  {
+    id: 'course-ai-product',
+    title: 'Applied AI Workflows & Prompt Engineering for Builders',
+    subtitle: 'Integrate LLM workflows, structured outputs, and smart automation into modern web apps.',
+    category: 'Data & AI',
+    level: 'All Levels',
+    price: 89,
+    originalPrice: 159,
+    rating: 4.9,
+    reviewsCount: 195,
+    studentsCount: 1190,
+    duration: '9h 45m',
+    instructor: {
+      name: 'Def Def',
+      role: 'AI Solutions Architect',
+      avatar: 'VN',
+    },
+    thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80',
+    status: 'Published',
+    featured: true,
+    outcomes: [
+      'Design deterministic prompt pipelines and evaluation rubrics',
+      'Build AI-assisted search, summarization, and user onboarding flows',
+      'Handle latency, streaming UX, and graceful fallback states',
+    ],
+    sections: [
+      {
+        id: 'sec-ai-1',
+        title: 'Prompt Architecture & UX Patterns',
+        lessons: [
+          {
+            id: 'les-301',
+            title: 'Structured JSON Outputs & Guardrails',
+            duration: '16:50',
+            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+            summary: 'Ensuring reliable UI rendering from AI responses.',
+            resources: ['Prompt-Templates.md'],
+          },
+        ],
+      },
+    ],
+    quiz: {
+      id: 'quiz-ai-1',
+      title: 'AI Product UX Quiz',
+      passingScore: 70,
+      questions: [
+        {
+          id: 'ai-q1',
+          question: 'Why are loading skeletons and streaming states critical in AI interfaces?',
+          options: [
+            'They increase server bills',
+            'They reduce perceived latency while responses generate',
+            'They disable user scrolling',
+            'They replace CSS completely',
+          ],
+          correctIndex: 1,
+        },
+      ],
+    },
+    assignment: {
+      id: 'asg-ai-1',
+      title: 'Design an AI Study Assistant Flow',
+      dueDate: '2026-12-20',
+      description: 'Map out user prompts, fallback states, and summary cards for a student note-taking tool.',
+    },
+    reviews: [],
+  },
+];
+
+export const ANALYTICS_MONTHLY = [
+  { month: 'Jun', enrollments: 210, completions: 145, revenue: 14200 },
+  { month: 'Jul', enrollments: 290, completions: 198, revenue: 19800 },
+  { month: 'Aug', enrollments: 340, completions: 240, revenue: 23100 },
+  { month: 'Sep', enrollments: 410, completions: 295, revenue: 28400 },
+  { month: 'Oct', enrollments: 495, completions: 360, revenue: 34900 },
+  { month: 'Nov', enrollments: 580, completions: 430, revenue: 41200 },
+];
